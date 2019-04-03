@@ -17,7 +17,7 @@ const Remote = () => (
       </Fade>
       <Fade bottom duration={1200} delay={400}>
         <p>
-          Talent shouldn’t be constrained to a piece of land. We work remote.
+          Talent shouldn't be constrained by geography. We work remote.
           Distance feels shorter when the vision of a fair world unites us all.
         </p>
         <BreakPoint to="medium">
@@ -39,9 +39,14 @@ const RemoteSection = styled.section`
   min-height: 600px;
   height: auto;
   background: none;
-  ${medium(
-    'background: url(${background}) no-repeat; background-size: 68%; background-position: 135% 50%;'
-  )};
+  ${breakpoint(
+    'medium',
+    `
+      background: url(${background}) no-repeat;
+      background-size: 68%;
+      background-position: 135% 50%;
+    `
+  )}
   display: flex;
   align-items: center;
 `;

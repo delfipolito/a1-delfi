@@ -39,14 +39,9 @@ const RemoteSection = styled.section`
   min-height: 600px;
   height: auto;
   background: none;
-  ${breakpoint(
-    'medium',
-    `
-      background: url(${background}) no-repeat;
-      background-size: 68%;
-      background-position: 135% 50%;
-    `
-  )}
+  ${medium(
+    'background: url(${background}) no-repeat; background-size: 68%; background-position: 135% 50%;'
+  )};
   display: flex;
   align-items: center;
 `;

@@ -14,6 +14,26 @@ class Posts extends React.Component {
   }
 
   componentDidMount() {
+    const api = new GhostContentAPI({
+      url: 'http://159.100.252.29/blog',
+      key: '71a7929ccd694f1c673e24dded',
+      version: 'v2'
+    });
+    api.posts
+      .browse({limit: 5, include: 'tags,authors'})
+      .then((posts) => {
+          this.setState({
+            items: posts,
+            loading: false,
+          });
+          posts.forEach((post) => {
+              console.log(post.title);
+          });
+      })
+      .catch((err) => {
+          console.error(err);
+      });
+
     fetch(
       'https://blog.aragon.one/ghost/api/v0.1/posts?limit=2&client_id=ghost-frontend&client_secret=b3cf42f3e06a'
     )

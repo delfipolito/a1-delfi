@@ -2,6 +2,7 @@ import React, {Fragment} from 'react';
 import styled from 'styled-components';
 import {breakpoint, BreakPoint, Button} from '@aragon/ui';
 const medium = css => breakpoint('medium', css);
+import GhostContentAPI from '@tryghost/content-api'
 import moment from 'moment';
 
 class Posts extends React.Component {
@@ -20,7 +21,7 @@ class Posts extends React.Component {
       version: 'v2'
     });
     api.posts
-      .browse({limit: 5, include: 'tags,authors'})
+      .browse({limit: 2, include: 'tags,authors'})
       .then((posts) => {
           this.setState({
             items: posts,
@@ -34,18 +35,6 @@ class Posts extends React.Component {
           console.error(err);
       });
 
-    fetch(
-      'https://blog.aragon.one/ghost/api/v0.1/posts?limit=2&client_id=ghost-frontend&client_secret=b3cf42f3e06a'
-    )
-      .then(res => res.json())
-      .then(json => {
-        console.log(json);
-        this.setState({
-          items: json.posts,
-          loading: false,
-        });
-      })
-      .catch(err => console.log(err));
   }
 
   render() {
@@ -56,11 +45,11 @@ class Posts extends React.Component {
         </h6>
         <PostContainer>
           {this.state.items.map(item => (
-            <Post key={item.id} target="_blank" href={'https://blog.aragon.one' + item.url}>
-              <Image src={'https://blog.aragon.one/' + item.feature_image} />
+            <Post key={item.id} target="_blank" href={item.url}>
+              <Image src={item.feature_image} />
               <Info>
                 <h6>{moment(item.created_at).format("MMM Do, YYYY")}</h6>
-                <p>{item.meta_title}</p>
+                <p>{item.title}</p>
               </Info>
             </Post>
           ))}

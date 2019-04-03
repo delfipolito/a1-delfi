@@ -22,6 +22,10 @@ body {
   width: 100vw;
   overflow-x: hidden;
 }
+.btn-primary {
+  background-color: transparent!important;
+  border-color: transparent!important;
+}
 
 html,body {
   font-size: 14px!important;;

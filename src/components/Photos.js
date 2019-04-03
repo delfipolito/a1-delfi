@@ -14,6 +14,8 @@ import photo11 from './assets/company/photo11.png';
 import photo12 from './assets/company/photo12.png';
 import photo13 from './assets/company/photo13.png';
 import photo14 from './assets/company/photo14.png';
+import photo15 from './assets/company/photo15.png';
+import photo16 from './assets/company/photo16.png';
 import Carousel from 'react-bootstrap/Carousel';
 import arrow from './assets/arrow.svg';
 
@@ -65,6 +67,12 @@ const Photos = () => (
           <PhotosContainer>
             <img src={photo13} />
             <img src={photo14} />
+          </PhotosContainer>
+        </Carousel.Item>
+        <Carousel.Item>
+          <PhotosContainer>
+            <img src={photo15} />
+            <img src={photo16} />
           </PhotosContainer>
         </Carousel.Item>
       </Carousel>

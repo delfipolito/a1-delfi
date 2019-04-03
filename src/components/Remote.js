@@ -40,7 +40,7 @@ const RemoteSection = styled.section`
   height: auto;
   background: none;
   ${medium(
-    'background: url(/static/a9fd696c-map.gif) no-repeat; background-size: 68%; background-position: 135% 50%;'
+    'background: url(${background}) no-repeat; background-size: 68%; background-position: 135% 50%;'
   )};
   display: flex;
   align-items: center;

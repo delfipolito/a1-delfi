@@ -56,33 +56,33 @@ a, a span, button {
   bottom: -60px !important;
 }
 .carousel-control-prev {
-  display: none;
+  display: none !important;;
 }
 
 .carousel-control-next {
-  position: absolute;
-  top: -39px;
-  bottom: 0;
-  align-items: flex-start;
-  width: auto;
+  position: absolute!important;
+  top: -39px!important;
+  bottom: 0!important;
+  align-items: flex-start!important;
+  width: auto!important;
 }
 
 .carousel-indicators li {
-  width: 15%;
-  border: 0px solid transparent;
-  border-bottom: solid 2px #3a3a3a;
-  height: 21px;
-  background: transparent;
-  opacity: 1;
-  margin: 0;
+  width: 15%!important;
+  border: 0px solid transparent!important;
+  border-bottom: solid 2px #3a3a3a!important;
+  height: 21px!important;
+  background: transparent!important;
+  opacity: 1!important;
+  margin: 0!important;
 }
 .carousel-indicators li.active {
-  background: linear-gradient(185.85deg, #FF7C56 0%, #FF5D5D 80.57%);
-  height: 2px;
-  border-bottom: 0px;
-  border-top: black solid 19px;
-  position: relative;
-  top: 2px;
+  background: linear-gradient(185.85deg, #FF7C56 0%, #FF5D5D 80.57%)!important;
+  height: 2px!important;
+  border-bottom: 0px!important;
+  border-top: black solid 19px!important;
+  position: relative!important;
+  top: 2px!important;
 }
 
 

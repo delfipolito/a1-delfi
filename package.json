@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "license": "AGPL-3.0-or-later",
-  "homepage": "http://delfipolito.github.io/a1-delfi",
+  "homepage": "https://delfipolito.github.io/a1-delfi",
   "scripts": {
     "start": "NODE_PRESERVE_SYMLINKS=1 react-static start",
     "build": "NODE_PRESERVE_SYMLINKS=1 react-static build",
     "optimize-svg": "find ./src -name '*.svg' -exec svgo --config '{ \"plugins\": [ { \"removeDesc\": {\"removeAny\": true}, \"removeTitle\": true } ] }' {} \\;",
     "generate-favicon": "icon-gen -i favicon.png -o public -r",
-    "deploy": "NODE_ENV=production SITE_ROOT=http://delfipolito.github.io/a1-delfi/ npm run build && gh-pages -d dist"
+    "deploy": "NODE_ENV=production SITE_ROOT=https://delfipolito.github.io BASE_PATH=a1-delfi npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@aragon/ui": "^0.32.0",

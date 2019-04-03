@@ -16,7 +16,7 @@ class Posts extends React.Component {
 
   componentDidMount() {
     const api = new GhostContentAPI({
-      url: 'http://159.100.252.29/blog',
+      url: 'https://159.100.252.29/blog',
       key: '71a7929ccd694f1c673e24dded',
       version: 'v2'
     });

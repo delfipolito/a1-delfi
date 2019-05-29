@@ -14,10 +14,16 @@ class Hero extends React.Component {
         <Navbar />
         <Container>
           <div>
-            <h1 className="fist-title">We believe and</h1>
-            <h1 className="second-title">
-              <span className="pink">fight for freedom</span>
-            </h1>
+            <BreakPoint to="medium">
+              <h1 className="">We believe in and</h1>
+              <h1 className="mobile-pink">fight for freedom</h1>
+            </BreakPoint>
+            <BreakPoint from="medium">
+              <h1 className="fist-title">We believe in and</h1>
+              <h1 className="second-title">
+                <span className="pink">fight for freedom</span>
+              </h1>
+            </BreakPoint>
           </div>
         </Container>
       </HeroSection>
@@ -48,7 +54,8 @@ const Container = styled.div`
     animation-fill-mode: both;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
-  .second-title, .second-title::after {
+  .second-title,
+  .second-title::after {
     animation-delay: var(--animation-delay, 1.5s);
     animation-iteration-count: var(--iterations, 1);
     animation-duration: var(--duration, 600ms);
@@ -89,7 +96,7 @@ const Container = styled.div`
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: #FF5D5D;
+      background-color: #ff5d5d;
       transform: scaleX(0);
       transform-origin: 0 50%;
       pointer-events: none;
@@ -163,12 +170,25 @@ const Container = styled.div`
     font-size: 4.28rem;
     ${medium('font-size: 8rem;')};
     ${large('font-size: 10.43rem;')};
+    @media only screen and (min-width: 1170px) and (max-width: 1330px) {
+      font-size: 9rem;
+    }
+    @media only screen and (min-width: 962px) and (max-width: 1170px) {
+      font-size: 8rem;
+    }
+    @media only screen and (min-width: 770px) and (max-width: 962px) {
+      font-size: 7rem;
+    }
   }
   span.pink {
+    word-break: break-all;
     color: #ff5d5d;
     background: -webkit-linear-gradient(left, #ff3333, #ff7c56);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  .mobile-pink {
+    color: #ff5d5d;
   }
 `;
 export default Hero;

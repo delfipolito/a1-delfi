@@ -11,21 +11,41 @@ const medium = css => breakpoint('medium', css);
 class JobOpening extends React.Component {
   constructor(props, context) {
     super(props, context);
-
+    let open = false;
+    if(window.location.href.indexOf(this.props.open) > 0) {
+      open = true;
+    }
     this.state = {
-      open: false,
+      open: open,
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick () {
+    let open = this.state.open;
+    if (!open) {
+      window.location.hash = this.props.open;
+    }
+    this.setState({open: !open})
+  }
+  componentDidMount() {
+    let open = false;
+    if(window.location.href.indexOf(this.props.open) > 0) {
+      open = true;
+    }
+    this.state = {
+      open: open,
     };
   }
-
   render() {
     const {open} = this.state;
     return (
-      <JobOpeningSection>
+      <JobOpeningSection >
         <JobTitle
-          onClick={() => this.setState({open: !open})}
+          onClick={this.handleClick}
           aria-controls="collapse-text"
-          aria-expanded={open}>
-          <div className="info-title">
+          aria-expanded={open}
+          >
+          <div className="info-title" id={this.props.idprop || ''}>
             <h4>{this.props.category}</h4>
             <h2>{this.props.title}</h2>
           </div>
@@ -90,7 +110,8 @@ const JobTitle = styled.div`
   ${medium('flex-direction: row; padding: 45px 40px 40px 40px;')};
   .info-title {
     padding: 45px 40px 20px 40px;
-    ${medium('padding 0;')};
+    width: 100%;
+    ${medium('padding 0; width: auto;')};
   }
   .icon-title {
     width: 100%;
@@ -109,12 +130,14 @@ const JobTitle = styled.div`
     line-height: 1.5;
     font-size: 2.28rem;
     margin: 0;
+    word-break: break-word;
   }
   h4 {
     font-family: 'FontRegular';
     margin: 0;
     font-size: 1rem;
     letter-spacing: 2.6px;
+    word-break: break-word;
     color: #ff7671;
   }
 `
@@ -124,6 +147,7 @@ const JobBody = styled.div`
     line-height: 2;
     font-size: 1.71rem;
     letter-spacing: 0.275px;
+    word-break: break-word;
   }
   li {
     line-height: 1.5;
@@ -137,6 +161,8 @@ const JobBody = styled.div`
   ul {
     list-style: none;
     margin-bottom: 40px;
+    padding-left: 15px;
+    ${medium('padding-left: 40px;')};
   }
 
   ul li::before {
@@ -145,8 +171,9 @@ const JobBody = styled.div`
     font-weight: bold;
     font-size: 2.14rem;
     display: inline-block;
-    width: 30px;
-    margin-left: -30px;
+    width: 15px;
+    margin-left: -15px;
+    ${medium('width: 30px; margin-left: -30px;')};
     position: relative;
     top: 1px;
   }

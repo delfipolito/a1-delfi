@@ -5,7 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Button from 'react-bootstrap/Button';
 import twitter from './assets/twitter.svg';
-import speech from './assets/speech.svg';
+import ghost from './assets/ghost.svg';
 import background from './assets/hero-background.svg';
 import { Link } from 'react-static';
 
@@ -30,11 +30,11 @@ class AragonOneModal  extends React.Component {
         </ImageBox>
         <LinksBox>
           <MenuHeader>
-            <div><a target="_blank" href=""><img src={speech}/></a></div>
+            <div><a target="_blank" href="https://blog.aragon.one"><img src={ghost}/></a></div>
             <div><a target="_blank" href="https://twitter.com/AragonOneTeam"><img src={twitter}/></a></div>
           </MenuHeader>
           <div className="links">
-            <h6>WELCOME ARAGON ONE CREW</h6>
+            <BreakPoint from="medium"><h6>WELCOME TO ARAGON ONE</h6></BreakPoint>
             <ul>
               <li>
                 <Link to={'/#about'} onClick={this.props.onHide}>About</Link>
@@ -135,7 +135,7 @@ const LinksBox = styled.div`
     font-size: 1rem;
     line-height: 1;
     letter-spacing: 6px;
-    transform: rotate(-90deg) translate(-50%,calc(100% + 310px));
+    transform: rotate(-90deg) translate(-50%,calc(100% + 278px));
   }
 `
 const ImageBox = styled.div`

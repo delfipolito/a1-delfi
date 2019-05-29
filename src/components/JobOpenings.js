@@ -9,74 +9,59 @@ const large = css => breakpoint('large', css);
 
 const JobOpenings = () => (
   <JobOpeningsSection id="jobs">
-    <h6>
+    <h6 id="growth-marketing">
       <span className="grey">—</span> OPEN JOBS POSITIONS
     </h6>
     <Slide bottom duration={1200}>
       <JobOpening
-        role="Operations"
-        category="OPERATIONS"
-        title="Operations"
-        description="We’re looking for an Operations person who loves to wear many hats, ready to hustle, and able to turn chaos into efficient processes. You will help us bridge Aragon One with the world by optimizing traditional operations, supporting the team and the community, and defining the development of apps to automate operations in DAOs. ">
+        role="Growth Marketing"
+        category="COMMS"
+        title="Growth Marketing"
+        open="growth-marketing"
+        idprop="frontend-engineer"
+        description="We're looking for a Growth Marketer who is hands-on, social, and thrives in a data-informed, vision-driven environment. You will help us bridge the community and developers with Aragon's products and brand. Our Growth Marketer should have a passion for connecting and networking with the open source community.">
         <h5>Responsibilities</h5>
         <ul>
           <li>
-            Collaborate with financial and accounting partners to manage
-            financial models and reports, accounting payable and receivable and
-            bookkeeping.
+            Grow the scale of the Aragon brand through different online and
+            offline channels.
           </li>
           <li>
-            Define, track and report operations metrics, forecasts and budgets.
+            Plan, test, track, and optimize growth tactics and metrics
+            for user acquisition and retention.
           </li>
           <li>
-            Collaborate with legal partners and HR to process visas, work
-            permits, policies, insurance, contracts, and other legal
-            responsibilities.
-          </li>
-          <li>Work with the CEO to develop strategic.</li>
-          partnerships with banks, governments, and other external stakeholders.
-          <li>
-            Work with the Communications team to manage sponsorships, providers
-            and team logistics for events, meetups, and conferences.
+            Prepare and coordinate press releases, announcements,
+            and other news with media and third-party partners.
           </li>
           <li>
-            Work with the Communications team to build and develop an
-            Ambassadors program.
+            Propose and translate creative ideas to boost community engagement
+            and attract product demand and find product-market-fit.
           </li>
           <li>
-            Work with the Product team to research features and apps to automate
-            operations in DAOs (such as the{' '}
-            <a
-              target="_blank"
-              href="https://github.com/aragon/aragon-apps/tree/master/future-apps/payroll">
-              Aragon Payroll
-            </a>{' '}
-            and the{' '}
-            <a
-              target="_blank"
-              href="https://github.com/aragon/aragon-apps/tree/master/apps/finance">
-              Aragon Finance
-            </a>{' '}
-            apps).
+            Brainstorm, test and implement viral marketing tactics with
+            experimental or template DAOs and other concepts to attract
+            product demand and find product-market-fit.
           </li>
         </ul>
         <h5>Requirements</h5>
         <ul>
           <li>
-            Experience working in an operations, admin, accounting, legal or
-            similar roles.
+            Deep understanding of digital marketing analytics,
+            creative and media tactics and best practices.
           </li>
           <li>
-            Experience working with spreadsheets, management reports and
-            delivering financial statements.
+            Strategic mindset and ability to execute quickly.
           </li>
           <li>
-            Very good written and spoken communication skills in English. German
-            is a plus.
+            Very good written and spoken communication skills in English.
           </li>
-          <li>Willingness to be involved in community and product projects.</li>
-          <li>Being organized and very detail oriented.</li>
-          <li>Being passionate about open source and decentralization.</li>
+          <li>
+            Being highly organized, analytical, and detail oriented.
+          </li>
+          <li>
+            Being passionate about open source and decentralization.
+          </li>
           <li>
             Being an autonomous individual with a proactive attitude and a love
             for time self-management. We work focus-driven, not hours-driven.
@@ -88,10 +73,6 @@ const JobOpenings = () => (
             Previous experience contributing or managing open source projects.
           </li>
           <li>Previous experience working remotely.</li>
-          <li>
-            European/Swiss resident with experience working with Swiss
-            institutions.
-          </li>
         </ul>
         <h5>How to apply</h5>
         <ul>
@@ -100,7 +81,7 @@ const JobOpenings = () => (
             you consider important to{' '}
             <a href="mailto:hiring@aragon.one">hiring@aragon.one</a>, with the
             subject
-            <span className="label">Operations opening application</span>.
+            <span className="label">Growth Marketing opening application</span>.
           </li>
           <li>Send along your LinkedIn, CV, Twitter and/or Medium profiles.</li>
         </ul>
@@ -111,6 +92,8 @@ const JobOpenings = () => (
         role="Frontend Engineer"
         category="ENGINEERING"
         title="Frontend Engineer"
+        open="frontend-engineer"
+        idprop="systems-engineer"
         description="We're looking for a Frontend Engineer with a love for beautiful, well-crafted interfaces. You'll work with our rockstar frontend team building Aragon Labs, Aragon client, and aragonOS.">
         <h5>Responsibilities</h5>
         <ul>
@@ -174,7 +157,7 @@ const JobOpenings = () => (
         <h5>How to apply</h5>
         <ul>
           <li>
-            Write an email with the following attachments plus any information
+            Write an email with your LinkedIn and/or CV plus any information
             you consider important to{' '}
             <a href="mailto:hiring@aragon.one">hiring@aragon.one</a>, with the
             subject
@@ -185,46 +168,6 @@ const JobOpenings = () => (
             only, we require applicants for developer positions to have a very
             active and healthy GitHub profile.
           </li>
-          <li>
-            Please send the following challenge completed:
-            <div className="highlight">
-              <h5>Description</h5>
-              <p>
-                Build a small app to explore the latest blocks on Ethereum. The
-                goal of the app is to provide a way to glance at the recent
-                Ether transfers happening on the blockchain.
-              </p>
-              <h5>Requirements</h5>
-              <ol>
-                <li>Display the ten latest blocks.</li>
-                <li>
-                  Allow the user to see the transactions from a block. Only the
-                  transactions sending Ether should be displayed.
-                </li>
-                <li>Allow the user to see some details about a transaction.</li>
-              </ol>
-              <h5>Notes</h5>
-              <ul>
-                <li>You can use any library you feel comfortable with.</li>
-                <li>The app will be loaded into a browser with MetaMask.</li>
-                <li>
-                  Feel free to interpret the requirements in any way that you
-                  think could be interesting.
-                </li>
-                <li>
-                  The app doesn’t need to follow the Aragon visual identity.
-                </li>
-                <li>Don’t hesitate to ask any question to the team</li>
-              </ul>
-              <h5>The submission will be evaluated on the following points:</h5>
-              <ul>
-                <li>Code quality / readability / testability.</li>
-                <li>UX / visual solutions.</li>
-                <li>Perceived performance.</li>
-                <li>Accessibility.</li>
-              </ul>
-            </div>
-          </li>
         </ul>
       </JobOpening>
     </Slide>
@@ -233,6 +176,8 @@ const JobOpenings = () => (
         role="Systems Engineer"
         category="ENGINEERING"
         title="Systems Engineer"
+        open="systems-engineer"
+        idprop="developer-relations"
         description={
           <span>
             We’re looking for a Systems Engineer to help us architect and
@@ -310,9 +255,7 @@ const JobOpenings = () => (
             <span className="label">Systems Engineer opening application</span>.
           </li>
           <li>
-            Please send along your GitHub profile. Since we are open source
-            only, we require applicants for developer positions to have a very
-            active and healthy GitHub profile.
+            Please send along your LinkedIn, CV, Twitter, and/or Medium.
           </li>
         </ul>
       </JobOpening>
@@ -322,6 +265,8 @@ const JobOpenings = () => (
         role="Developer Relations"
         category="COMMUNITY"
         title="Developer Relations"
+        idprop="solidity-engineer"
+        open="developer-relations"
         description="We're looking for a Developer Relations to help third party developers create apps on top of the Aragon client and aragonOS. Our Dev Rels must be someone passionate in helping others understand technical subjects through technical writing, networking and educating people. That means that our ideal Dev Rels is not only a legit developer but also an Aragon Technical Evangelist.">
         <h5>Responsibilities</h5>
         <ul>
@@ -402,6 +347,8 @@ const JobOpenings = () => (
         role="Solidity Engineer"
         category="ENGINEERING"
         title="Solidity Engineer"
+        open="solidity-engineer"
+        idprop="documentation-technical-writer"
         description="We're looking for a Solidity Engineer to help us build the smart contract framework for decentralized organizations and court systems. You'll work with our product and research teams to architect and implement the Aragon client, Aragon Labs, and aragonOS. ">
         <h5>Responsibilities</h5>
         <ul>
@@ -466,6 +413,7 @@ const JobOpenings = () => (
         role="Documentation writer"
         category="ENGINEERING"
         title="Documentation Technical Writer"
+        open="documentation-technical-writer"
         description="We’re looking for a Technical Writer to help us communicate the different moving parts of Aragon client and Dev Tools to facilitate the development of the Ethereum community. Our Technical Writer will be the bridge between Aragon engineers and external developers, as well as the reference to support the growth of the Ethereum community through better documentation.">
         <h5>Responsibilities</h5>
         <ul>
@@ -537,9 +485,18 @@ const JobOpeningsSection = styled.section`
     margin-left: 5px;
   }
   .highlight {
-    background: #1B1B1B;
-    padding: 45px;
+    background: #1b1b1b;
     margin-top: 10px;
+    padding: 30px 5px;
+    ${medium('padding: 45px;')};
+    ul {
+      padding-left: 15px;
+      ${medium('padding-left: 40px;')};
+    }
+    ol {
+      padding-left: 23px;
+      ${medium('padding-left: 40px;')};
+    }
   }
 `;
 
